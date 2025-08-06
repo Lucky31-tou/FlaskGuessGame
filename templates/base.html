@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>App Flask</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <nav id="navbar">
+            <img src="{{ url_for('static', filename='img/lolo.png') }}" alt="Logo">
+            <ul id="items">
+                <li class="item">
+                    <a href="{{ url_for('index') }}">Accueil</a>
+                </li>
+                <li class="item">
+                    <a href="{{ url_for('jeu') }}">Jeu du nombre mystère</a>
+                </li>
+                <li class="item login-logout">
+                    {% if session["nom_user"] %}
+                        <a href="{{ url_for('logout') }}">Se déconnecter</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}">Se connecter</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+
+        <div id="container">
+            {% block content %}{% endblock %}
+        </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>

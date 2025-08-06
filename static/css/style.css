@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+#container {
+    margin: 20px 50px;
+}
+
+img {
+    width: 50px;
+}
+
+#navbar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: lightskyblue;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.item {
+    margin: 0 10px;
+}
+
+.item.login-logout {
+    margin-left: auto;
+}
+
+.item a {
+    text-decoration: none;
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+.item a:hover {
+    color: #fcfcfc;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>App Flask</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        {% if nom_utilisateur %}
+            <p>Bonjour {{ nom_utilisateur }}, vous êtes connecté !</p>
+        {% else %}
+            <p>Un problème est survenu.</p>
+        {% endif %}
+    </body>
+</html>

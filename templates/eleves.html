@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>App Flask</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Listes des élèves</h1>
+        <ul>
+            {% for eleve in eleves %}
+                <li>{{ eleve['nom'] }} {{ eleve['prenom'] }}, {{ eleve['classe'] }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

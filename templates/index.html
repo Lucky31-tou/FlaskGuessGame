@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hello Flask !</h1>
+<p>Salut {{ session["nom_user"]|title if session["nom_user"] else "p'tit gars" }}, bienvenue sur Flask !</p>
+{% endblock %}
